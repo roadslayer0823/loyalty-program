@@ -22,14 +22,16 @@ prisma/             # Prisma ORM configuration and migrations
 └── seed.js         # Initial data seeding (Admin account)
 src/
 ├── controllers/    # Route controllers (Business logic)
-├── middlewares/    # Custom Express middlewares (Auth, Multer)
+├── middlewares/    # Custom Express middlewares (Auth, Multer, Admin)
 ├── routes/         # API route definitions
 ├── utils/          # Utility functions (Prisma singleton)
 └── app.js          # Express application entry point
 uploads/            # Local storage for receipt images
+└── .gitkeep        # Ensures directory tracking in Git
 .env                # Environment variables (Sensitive)
 .env.example        # Environment variables template
 package.json        # Project dependencies and scripts
+package-lock.json   # Locked dependency versions
 ```
 
 ## 🛠️ Getting Started & Setup
@@ -55,6 +57,9 @@ package.json        # Project dependencies and scripts
    - `DATABASE_URL`: Your PostgreSQL connection string.
    - `JWT_SECRET`: A secure string for signing tokens.
    - `PORT`: Server port (default: 5000).
+   - `NODE_ENV`: Set to `development` or `production`.
+   - `ADMIN_EMAIL`: Initial email for the seeded admin account.
+   - `ADMIN_PASSWORD`: Initial password for the seeded admin account.
 
 ## 🗄️ Database Setup & Migration
 
@@ -96,5 +101,6 @@ package.json        # Project dependencies and scripts
 
 ## 🤖 AI-Assisted Development Note
 This project utilized AI tools (such as GitHub Copilot and LLMs) for boilerplate generation, controller logic structuring, and rapid validation schema design. The core business logic, database design, and architecture were reviewed and refined to ensure system robustness.
+
 ---
 *Loyalty Program Backend © 2026*
