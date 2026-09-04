@@ -61,6 +61,11 @@ const Navbar = () => {
             <Link to="/" onClick={closeSidebar}>Loyalty Program</Link>
           </div>
         </div>
+        <div className="navbar-right">
+          {!isAuthenticated && (
+            <Link to="/login" className="nav-login-link">Login</Link>
+          )}
+        </div>
       </nav>
 
       {/* Sidebar Overlay: Closes sidebar when background is clicked */}
