@@ -13,6 +13,25 @@ A full-stack backend solution for a Loyalty Program application, enabling users 
 - **File Handling**: Multer (Local Storage)
 - **Development**: Nodemon
 
+## 📁 Folder Architecture
+
+```text
+prisma/             # Prisma ORM configuration and migrations
+├── migrations/     # Database migration history
+├── schema.prisma   # Database models and relations
+└── seed.js         # Initial data seeding (Admin account)
+src/
+├── controllers/    # Route controllers (Business logic)
+├── middlewares/    # Custom Express middlewares (Auth, Multer)
+├── routes/         # API route definitions
+├── utils/          # Utility functions (Prisma singleton)
+└── app.js          # Express application entry point
+uploads/            # Local storage for receipt images
+.env                # Environment variables (Sensitive)
+.env.example        # Environment variables template
+package.json        # Project dependencies and scripts
+```
+
 ## 🛠️ Getting Started & Setup
 
 ### Prerequisites

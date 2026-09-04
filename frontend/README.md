@@ -19,7 +19,6 @@ src/
 ├── api/            # Axios instance and API interceptors
 ├── components/     # Reusable UI components (Navbar, Protected Routes)
 ├── context/        # Global state providers (Authentication)
-├── pages/          # Full-page components (Dashboard, Login, etc.)
 ├── assets/         # Static assets (images, logos)
 ├── App.jsx         # Main application routing and layout
 ├── main.jsx        # Application entry point
