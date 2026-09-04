@@ -63,14 +63,22 @@ package-lock.json   # Locked dependency versions
 
 ## 🗄️ Database Setup & Migration
 
-1. **Run Migrations**: Create the database schema and apply migrations.
+1. **Run Migrations**: Apply existing database migrations to set up your database schema.
    ```bash
-   npx prisma migrate dev --name init
+   npx prisma migrate deploy
    ```
-2. **Prisma Studio**: Launch the GUI to inspect your data.
+2. **Seed Database**: Populate the database with initial data, including the admin account.
+   ```bash
+   npx prisma db seed
+   ```
+3. **Prisma Studio**: Launch the GUI to inspect your data.
    ```bash
    npx prisma studio
    ```
+
+> **Note for Evaluators**: You can log in with the following default admin credentials after seeding:
+> - **Email**: `admin@loyalty.com`
+> - **Password**: `Admin123!`
 
 ## 🔌 API Overview
 
