@@ -93,7 +93,7 @@ const Navbar = () => {
                 </>
               )}
               <div className="sidebar-divider"></div>
-              <Link to="/settings" onClick={closeSidebar}>Settings</Link>
+              {!isAdmin && <Link to="/settings" onClick={closeSidebar}>Settings</Link>}
               <button onClick={handleLogout} className="sidebar-logout-btn">Logout</button>
             </>
           ) : (
