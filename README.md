@@ -40,7 +40,7 @@ Ensure your PostgreSQL server is running and create a database named `loyalty_db
 cd backend
 npm install
 # Configure .env based on .env.example
-npx prisma migrate dev --name init
+npx prisma migrate deploy
 npx prisma db seed # Creates initial admin: admin@loyalty.com / Admin123!
 npm run dev
 ```
