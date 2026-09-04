@@ -55,7 +55,16 @@ npm run dev
 ```
 
 The application will be accessible at `http://localhost:5173` (Frontend) and `http://localhost:5000` (Backend API).
+## 🏗️ High-Level System Architecture
 
+- **Decoupled Architecture**: Independent React SPA frontend communicating with a RESTful Express API via Axios.
+- **State & Session Persistence**: LocalStorage-backed `AuthContext` managing client sessions, paired with stateless JWT verification on protected backend endpoints.
+- **Transaction-Safe Rewards**: Atomic database operations (`prisma.$transaction`) ensure receipt approval and unique voucher generation occur together, preventing duplicate issuance.
+- **Input & File Validation**: Dual-layer validation using **Zod** for schema enforcement and **Multer** for file size/MIME-type checks on receipt uploads.
+
+## 🤖 AI-Assisted Development Note
+
+AI tools (GitHub Copilot and LLMs) were utilized during development for rapid boilerplate generation, UI layout structuring, and Zod schema drafting. Core business logic, Prisma migration schemas, authentication middleware, and security practices were independently reviewed and verified.
 ## 📖 Detailed Documentation
 
 For specific technical specifications, API documentation, and architecture decisions, please refer to the internal README files:
